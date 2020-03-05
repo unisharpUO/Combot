@@ -1,0 +1,5 @@
+c:\users\jeff\documents\visual studio 2013\Projects\Combot\ServerData\bin\Debug\ServerData.exe.config
+c:\users\jeff\documents\visual studio 2013\Projects\Combot\ServerData\bin\Debug\ServerData.exe
+c:\users\jeff\documents\visual studio 2013\Projects\Combot\ServerData\bin\Debug\ServerData.pdb
+c:\users\jeff\documents\visual studio 2013\Projects\Combot\ServerData\obj\Debug\ServerData.exe
+c:\users\jeff\documents\visual studio 2013\Projects\Combot\ServerData\obj\Debug\ServerData.pdb

@@ -1,0 +1,24 @@
+C:\Users\Jeff\documents\visual studio 2013\Projects\Combot\Client\bin\Debug\Client.exe.config
+C:\Users\Jeff\documents\visual studio 2013\Projects\Combot\Client\bin\Debug\Client.exe
+C:\Users\Jeff\documents\visual studio 2013\Projects\Combot\Client\bin\Debug\Client.pdb
+C:\Users\Jeff\documents\visual studio 2013\Projects\Combot\Client\bin\Debug\ScriptDotNet2.dll
+C:\Users\Jeff\documents\visual studio 2013\Projects\Combot\Client\bin\Debug\ServerData.exe
+C:\Users\Jeff\documents\visual studio 2013\Projects\Combot\Client\bin\Debug\ServerData.pdb
+C:\Users\Jeff\documents\visual studio 2013\Projects\Combot\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\Jeff\documents\visual studio 2013\Projects\Combot\Client\obj\Debug\Client.exe
+C:\Users\Jeff\documents\visual studio 2013\Projects\Combot\Client\obj\Debug\Client.pdb
+C:\Users\Jeff\Documents\Visual Studio 2015\Projects\Combot\Client\bin\Debug\Client.exe.config
+C:\Users\Jeff\Documents\Visual Studio 2015\Projects\Combot\Client\obj\Debug\Client.exe
+C:\Users\Jeff\Documents\Visual Studio 2015\Projects\Combot\Client\obj\Debug\Client.pdb
+C:\Users\Jeff\Documents\Visual Studio 2015\Projects\Combot\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\jeff\Documents\Visual Studio 2015\Projects\Combot\Client\bin\Debug\Client.exe
+C:\Users\jeff\Documents\Visual Studio 2015\Projects\Combot\Client\bin\Debug\Client.pdb
+C:\Users\jeff\Documents\Visual Studio 2015\Projects\Combot\Client\bin\Debug\ScriptSDK.dll
+C:\Users\jeff\Documents\Visual Studio 2015\Projects\Combot\Client\bin\Debug\ServerData.exe
+C:\Users\jeff\Documents\Visual Studio 2015\Projects\Combot\Client\bin\Debug\XScript.dll
+C:\Users\jeff\Documents\Visual Studio 2015\Projects\Combot\Client\bin\Debug\ServerData.pdb
+C:\Users\jeff\Documents\Visual Studio 2015\Projects\Combot\Client\bin\Debug\ScriptSDK.pdb
+C:\Users\jeff\Documents\Visual Studio 2015\Projects\Combot\Client\bin\Debug\XScript.pdb
+C:\Users\jeff\Documents\Repos\Combot\Client\bin\Debug\Client.exe.config
+C:\Users\jeff\Documents\Repos\Combot\Client\obj\Debug\Client.exe
+C:\Users\jeff\Documents\Repos\Combot\Client\obj\Debug\Client.pdb

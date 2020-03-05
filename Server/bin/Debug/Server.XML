@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Server</name>
+    </assembly>
+    <members>
+        <member name="T:Combot.Routines.Combat">
+            <summary>
+            Combat is a routine to handle healing
+            and attacking
+            </summary>
+        </member>
+        <member name="F:Combot.Routines.Combat.GroupList">
+            <summary>
+            Basic list of creatures used for
+            checking health in the Combat Routine
+            </summary>
+        </member>
+        <member name="F:Combot.Routines.Combat.ActiveGroupList">
+            <summary>
+            ActiveGroupList is a changing property that
+            consists of Creatures in the GroupList which
+            are isExist
+            </summary>
+        </member>
+        <member name="M:Combot.Routines.Combat.routine">
+            <summary>
+            Main routine loop for generating in-game
+            data to send to the clients
+            </summary>
+        </member>
+        <member name="T:Combot.Server.Combot">
+            <summary>
+            Main combot class
+            </summary>
+        </member>
+        <member name="F:Combot.Server.Combot.Self">
+            <summary>
+            PlayerMobile type of the profile the server is running on
+            </summary>
+        </member>
+        <member name="F:Combot.Server.Combot.combotID">
+            <summary>
+            ID of the profile the server is running on
+            </summary>
+        </member>
+        <member name="F:Combot.Server.Combot.combotName">
+            <summary>
+            Name of the profile the server is running on
+            </summary>
+        </member>
+        <member name="M:Combot.Server.Combot.ConsoleMessage(System.String,System.Object[])">
+            <summary>
+            Method for posting messages to the console
+            with a timestamp
+            </summary>
+            <param name="message">string: message to send to the console</param>
+            <param name="args">(optional)object[]: additional arguments</param>
+        </member>
+        <member name="M:Combot.Server.Combot.ConsoleMessage(System.String,System.ConsoleColor,System.Object[])">
+            <summary>
+            Method for posting messages to the console
+            with a timestamp and optional color
+            </summary>
+            <param name="message">string: message to send to the console</param>
+            <param name="color">(optional)enum ConsoleColor: the color you want the message to be</param>
+            <param name="args">(optional)object[]: additional arguments</param>
+        </member>
+        <member name="M:Combot.Server.Combot.Main(System.String[])">
+            <summary>
+            Main startup class
+            </summary>
+            <param name="args">args</param>
+        </member>
+        <member name="T:Combot.Server.Combot.Routine">
+            <summary>
+            Class containing all the routines for the connected
+            stealth profile to run, each routine is ran in a
+            separate thread
+            </summary>
+        </member>
+        <member name="M:Combot.Server.Combot.Routine.init">
+            <summary>
+            Initialize routines
+            </summary>
+        </member>
+        <member name="T:Combot.Server.Server">
+            <summary>
+            Contains methods to start listening for clients
+            and holds the job queue
+            </summary>
+        </member>
+        <member name="F:Combot.Server.Server._clients">
+            <summary>
+            A list of connected clients
+            </summary>
+        </member>
+        <member name="F:Combot.Server.Server.jobQueue">
+            <summary>
+            A list of jobs queued by the server
+            listed in order of priority set by
+            the client
+            </summary>
+        </member>
+        <member name="M:Combot.Server.Server.Start">
+            <summary>
+            Method that starts listening for clients
+            </summary>
+        </member>
+        <member name="M:Combot.Server.Server.listenThread">
+            <summary>
+            Infinite loop listening for new clients
+            </summary>
+        </member>
+        <member name="M:Combot.Server.Server.incomingData(System.Object)">
+            <summary>
+            Data being received from a client
+            </summary>
+            <param name="cSocket">Socket of the client to receive data from</param>
+        </member>
+        <member name="M:Combot.Server.Server.removeClientInfo(System.Net.Sockets.Socket)">
+            <summary>
+            Removes the client from the list of
+            connected clients
+            </summary>
+            <param name="socket">Socket which the
+            client is connected to</param>
+        </member>
+        <member name="M:Combot.Server.Server.dataManager(Combot.Data.Packet)">
+            <summary>
+            Manages a packet sent from
+            a client and does something
+            based on what type of packet
+            was sent
+            </summary>
+            <param name="p">a packet,
+            caught by incomingData</param>
+        </member>
+        <member name="T:Combot.Server.Server.ClientData">
+            <summary>
+            The client object contains
+            methods for handling client
+            data
+            </summary>
+        </member>
+        <member name="F:Combot.Server.Server.ClientData.clientSocket">
+            <summary>
+            Socket that the client is connected to
+            </summary>
+        </member>
+        <member name="F:Combot.Server.Server.ClientData.clientThread">
+            <summary>
+            Thread that the connection is running on
+            </summary>
+        </member>
+        <member name="F:Combot.Server.Server.ClientData.clientName">
+            <summary>
+            Name of the client's connected profile
+            </summary>
+        </member>
+        <member name="F:Combot.Server.Server.ClientData.clientId">
+            <summary>
+            ID of the client's connected profile
+            </summary>
+        </member>
+        <member name="F:Combot.Server.Server.ClientData.IsCasting">
+            <summary>
+            True if the client's profile is casting
+            </summary>
+        </member>
+        <member name="F:Combot.Server.Server.ClientData.IsBusy">
+            <summary>
+            True if the client's profile is busy
+            </summary>
+        </member>
+        <member name="F:Combot.Server.Server.ClientData.id">
+            <summary>
+            Guid given by server
+            </summary>
+        </member>
+        <member name="M:Combot.Server.Server.ClientData.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Combot.Server.Server.ClientData.#ctor(System.Net.Sockets.Socket)">
+            <summary>
+            
+            </summary>
+            <param name="clientSocket"></param>
+        </member>
+        <member name="M:Combot.Server.Server.ClientData.sendregistrationPacket">
+            <summary>
+            Client sends a packet with a Guid
+            so the server can identify us
+            </summary>
+        </member>
+        <member name="T:Combot.Server.PriorityQueue`1">
+            <summary>
+            Queue list of items that are
+            sorted by priority
+            </summary>
+            <typeparam name="T">generic type</typeparam>
+        </member>
+        <member name="M:Combot.Server.PriorityQueue`1.#ctor">
+            <summary>
+            PriorityQueue represents a list of items
+            </summary>
+        </member>
+        <member name="M:Combot.Server.PriorityQueue`1.enqueue(`0)">
+            <summary>
+            Add items to the queue,
+            will only add if it doesn't
+            already exist
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Combot.Server.PriorityQueue`1.notify">
+            <summary>
+            Notifies clients of pending jobs in the queue
+            </summary>
+        </member>
+        <member name="M:Combot.Server.PriorityQueue`1.Find(System.Guid)">
+            <summary>
+            Searches for a job in the list
+            </summary>
+            <param name="jobID">Guid of the job to find</param>
+            <returns></returns>
+        </member>
+        <member name="M:Combot.Server.PriorityQueue`1.Remove(System.Guid)">
+            <summary>
+            Returns true if the job was removed
+            </summary>
+            <param name="jobID">Guid of the job to remove</param>
+            <returns></returns>
+        </member>
+        <member name="M:Combot.Server.PriorityQueue`1.Peek">
+            <summary>
+            Return the item with the highest priority
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Combot.Server.PriorityQueue`1.Count">
+            <summary>
+            Counts the items in the list
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:Combot.Server.PriorityQueue`1.ToString">
+            <summary>
+            Returns the entire list and all it's items as a string
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Combot.Server.PriorityQueue`1.ToPost">
+            <summary>
+            Returns the entire list of jobs with just the type and target
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Combot.Server.PriorityQueue`1.IsConsistent">
+            <summary>
+            Used for comparing job priorities
+            </summary>
+            <returns>bool</returns>
+        </member>
+    </members>
+</doc>
