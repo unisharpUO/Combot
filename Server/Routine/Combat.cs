@@ -23,13 +23,11 @@ namespace Combot.Routines
         /// </summary>
         static List<Mobile> GroupList = new List<Mobile>
         {
-            new Mobile(new Serial(8439902)), //Sad
-            //new Creature(37928828), //Splen
-            //new Creature(16373319), //Tor
-            //new Creature(3985473), //Wil
-            new Mobile(new Serial(11914331)), //Cai
-            new Mobile(new Serial(13342484)), //Sad
-            new Mobile(new Serial(39645748)) //Aut
+            //SET YOUR IDS HERE
+            new Mobile(new Serial(00000000)), // PLAYER 1 ID
+            new Mobile(new Serial(00000000)), // PLAYER 2 ID
+            new Mobile(new Serial(00000000)), // PLAYER 3 ID
+            new Mobile(new Serial(00000000)) // PLAYER 4 ID
         };
 
         /// <summary>
