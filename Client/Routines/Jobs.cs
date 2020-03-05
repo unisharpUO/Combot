@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using ScriptSDK;
-using ScriptSDK.API;
+using StealthAPI;
 using ScriptSDK.Mobiles;
 using ScriptSDK.Items;
 using Combot.Data;

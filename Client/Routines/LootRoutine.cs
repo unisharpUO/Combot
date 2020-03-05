@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using ScriptSDK;
-using ScriptSDK.API;
+using StealthAPI;
 using ScriptSDK.Data;
 using ScriptSDK.Engines;
 using ScriptSDK.Items;

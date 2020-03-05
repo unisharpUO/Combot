@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using ScriptSDK.API;
+using StealthAPI;
 using ScriptSDK;
 using ScriptSDK.Engines;
 using ScriptSDK.Items;

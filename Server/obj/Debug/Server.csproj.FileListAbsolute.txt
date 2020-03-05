@@ -17,3 +17,17 @@ C:\Users\Jeff\Documents\Visual Studio 2015\Projects\Combot\Server\bin\Debug\Serv
 C:\Users\Jeff\Documents\Visual Studio 2015\Projects\Combot\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
 C:\Users\Jeff\Documents\Visual Studio 2015\Projects\Combot\Server\obj\Debug\Server.exe
 C:\Users\Jeff\Documents\Visual Studio 2015\Projects\Combot\Server\obj\Debug\Server.pdb
+C:\Users\CFS-Jeff\source\repos\Combot\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\CFS-Jeff\source\repos\Combot\Server\obj\Debug\Server.exe
+C:\Users\CFS-Jeff\source\repos\Combot\Server\obj\Debug\Server.pdb
+C:\Users\CFS-Jeff\source\repos\Combot\Server\bin\Debug\Server.exe.config
+C:\Users\CFS-Jeff\source\repos\Combot\Server\bin\Debug\Server.XML
+C:\Users\CFS-Jeff\source\repos\Combot\Server\bin\Debug\Server.exe
+C:\Users\CFS-Jeff\source\repos\Combot\Server\bin\Debug\Server.pdb
+C:\Users\CFS-Jeff\source\repos\Combot\Server\bin\Debug\ScriptSDK.dll
+C:\Users\CFS-Jeff\source\repos\Combot\Server\bin\Debug\ServerData.exe
+C:\Users\CFS-Jeff\source\repos\Combot\Server\bin\Debug\ServerData.pdb
+C:\Users\CFS-Jeff\source\repos\Combot\Server\bin\Debug\ServerData.exe.config
+C:\Users\CFS-Jeff\source\repos\Combot\Server\bin\Debug\ScriptSDK.pdb
+C:\Users\CFS-Jeff\source\repos\Combot\Server\bin\Debug\ScriptSDK.xml
+C:\Users\CFS-Jeff\source\repos\Combot\Server\obj\Debug\Server.csproj.CopyComplete

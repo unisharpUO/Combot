@@ -34,9 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ScriptSDK, Version=1.0.3.20074, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="ScriptSDK, Version=1.0.3.15530, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Source\Repos\scriptsdk-code\ScriptSDK\bin\ScriptSDK.dll</HintPath>
+      <HintPath>..\..\ScriptSDK\ScriptSDK\bin\Debug\ScriptSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

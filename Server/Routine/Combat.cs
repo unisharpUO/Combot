@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using ScriptSDK;
-using ScriptSDK.API;
+using StealthAPI;
 using ScriptSDK.Mobiles;
 
 namespace Combot.Routines

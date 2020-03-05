@@ -11,3 +11,8 @@ C:\Users\Jeff\Documents\Visual Studio 2015\Projects\Combot\ServerData\bin\Debug\
 C:\Users\Jeff\Documents\Visual Studio 2015\Projects\Combot\ServerData\bin\Debug\ServerData.exe
 C:\Users\Jeff\Documents\Visual Studio 2015\Projects\Combot\ServerData\bin\Debug\ServerData.pdb
 C:\Users\jeff\Documents\Visual Studio 2015\Projects\Combot\ServerData\obj\Debug\Data.csprojResolveAssemblyReference.cache
+C:\Users\CFS-Jeff\source\repos\Combot\ServerData\bin\Debug\ServerData.exe.config
+C:\Users\CFS-Jeff\source\repos\Combot\ServerData\bin\Debug\ServerData.exe
+C:\Users\CFS-Jeff\source\repos\Combot\ServerData\bin\Debug\ServerData.pdb
+C:\Users\CFS-Jeff\source\repos\Combot\ServerData\obj\Debug\ServerData.exe
+C:\Users\CFS-Jeff\source\repos\Combot\ServerData\obj\Debug\ServerData.pdb
