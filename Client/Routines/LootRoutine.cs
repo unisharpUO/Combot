@@ -190,7 +190,10 @@ namespace Combot
                 {
 
                     Stealth.Client.PartySay("Looting Item: " + _loot.Serial.Value + ' ' + _loot.Reason);
-                    Stealth.Client.MoveItem(_loot.Serial.Value, 1, Controller.Self.Backpack.Serial.Value, 0, 0, 0);
+                    //Stealth.Client.MoveItem(_loot.Serial.Value, 1, Controller.Self.Backpack.Serial.Value, 0, 0, 0);
+                    if (Stealth.Client.DragItem(_loot.Serial.Value, 1) == true)
+                        Stealth.Client.DropItem(Controller.Self.Backpack.Serial.Value, 0, 0, 0);
+
                     Scanner.Ignore(_loot.Serial);
                     Thread.Sleep(1500);
                 }
