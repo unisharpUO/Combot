@@ -35,7 +35,6 @@ C:\Users\CFS-Jeff\source\repos\Combot\Client\bin\Debug\ServerData.pdb
 C:\Users\CFS-Jeff\source\repos\Combot\Client\bin\Debug\ServerData.exe.config
 C:\Users\CFS-Jeff\source\repos\Combot\Client\bin\Debug\ScriptSDK.pdb
 C:\Users\CFS-Jeff\source\repos\Combot\Client\bin\Debug\ScriptSDK.xml
-C:\Users\CFS-Jeff\source\repos\Combot\Client\bin\Debug\XScript.pdb
 C:\Users\CFS-Jeff\source\repos\Combot\Client\bin\Debug\XScript.dll.config
 C:\Users\CFS-Jeff\source\repos\Combot\Client\obj\Debug\Client.csproj.CopyComplete
 C:\Users\jeff\source\repos\Combot\Client\bin\Debug\Client.exe.config
@@ -53,3 +52,4 @@ C:\Users\jeff\source\repos\Combot\Client\obj\Debug\Client.exe
 C:\Users\jeff\source\repos\Combot\Client\obj\Debug\Client.pdb
 C:\Users\jeff\source\repos\Combot\Client\bin\Debug\XScript.dll
 C:\Users\jeff\source\repos\Combot\Client\bin\Debug\XScript.dll.config
+C:\Users\CFS-Jeff\source\repos\Combot\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache

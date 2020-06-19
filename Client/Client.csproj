@@ -33,9 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ScriptSDK, Version=0.9.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ScriptSDK\ScriptSDK\bin\Debug\ScriptSDK.dll</HintPath>
+    <Reference Include="ScriptSDK">
+      <HintPath>..\..\XScript\XScript\bin\ScriptSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,9 +43,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="XScript, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Documents\Repos\XScript\XScript\bin\XScript.dll</HintPath>
+    <Reference Include="XScript">
+      <HintPath>..\..\XScript\XScript\bin\XScript.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

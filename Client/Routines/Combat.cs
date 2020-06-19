@@ -24,7 +24,7 @@ namespace Combot
 
             #region Events
             Stealth.Client.Buff_DebuffSystem += onBuff;
-            Stealth.Client.UnicodeSpeech += onSpeech;
+            Stealth.Client.Speech += onSpeech;
             Stealth.Client.PartyInvite += onInvite;
             Stealth.Client.ClilocSpeech += onClilocSpeech;
             #endregion Events
@@ -67,7 +67,7 @@ namespace Combot
                 Stealth.Client.PartyAcceptInvite();
         }
 
-        static void onSpeech(object sender, UnicodeSpeechEventArgs e)
+        static void onSpeech(object sender, SpeechEventArgs e)
         {
             if (e.SenderId == Leader.Serial.Value)
             {

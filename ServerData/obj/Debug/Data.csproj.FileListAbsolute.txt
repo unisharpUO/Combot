@@ -22,3 +22,4 @@ C:\Users\jeff\source\repos\Combot\ServerData\bin\Debug\ServerData.pdb
 C:\Users\jeff\source\repos\Combot\ServerData\obj\Debug\ServerData.exe
 C:\Users\jeff\source\repos\Combot\ServerData\obj\Debug\ServerData.pdb
 C:\Users\jeff\source\repos\Combot\ServerData\obj\Debug\Data.csprojAssemblyReference.cache
+C:\Users\CFS-Jeff\source\repos\Combot\ServerData\obj\Debug\Data.csproj.CoreCompileInputs.cache

@@ -4,58 +4,1217 @@
         <name>ScriptSDK</name>
     </assembly>
     <members>
-        <member name="M:StealthAPI.Converters.ToDateTime(System.Single)">
+        <member name="T:ScriptSDK.Gumps.OSIGumpIDs">
             <summary>
-            Converts a TDateTime from Delphi to a DateTime in .NET
-            For more info see: http://docs.embarcadero.com/products/rad_studio/delphiAndcpp2009/HelpUpdate2/EN/html/delphivclwin32/System_TDateTime.html
+            OSI based GumpIDs to let you know what gump you are specifically wanting.
             </summary>
-            <param name="tDateTime"></param>
+            <example> Gump.GetGump((uint)OSIGumpIDs.Runebook)</example>
+        </member>
+        <member name="F:ScriptSDK.Gumps.OSIGumpIDs.Runebook">
+            <summary>
+            Returns Runebook GumpID
+            </summary>
+        </member>
+        <member name="F:ScriptSDK.Gumps.OSIGumpIDs.Moongate">
+            <summary>
+            Returns Moongate GumpID
+            </summary>
+        </member>
+        <member name="T:ScriptSDK.Gumps.GumpExtensions">
+            <summary>
+            Extends Gump instanced objects by further functions.
+            </summary>
+        </member>
+        <member name="M:ScriptSDK.Gumps.GumpExtensions.WaitForGumpClose(ScriptSDK.Gumps.Gump,System.Double)">
+            <summary> 
+            Function describes a process where the user waits for a close action for certain gump type dynamicly but <br/>
+            for a given timespan. Returns true if this event occured or false if not.
+            </summary>
+            <param name="gump"></param>
+            <param name="MaxDelay"></param>
             <returns></returns>
         </member>
-        <member name="M:StealthAPI.Converters.ToDateTime(System.Double)">
+        <member name="T:ScriptSDK.Gumps.GumpAlphaRegion">
             <summary>
-            Converts a TDateTime from Delphi to a DateTime in .NET
-            For more info see: http://docs.embarcadero.com/products/rad_studio/delphiAndcpp2009/HelpUpdate2/EN/html/delphivclwin32/System_TDateTime.html
+            GumpAlphaRegion component exposes a Panel, the player can read.<br/>
+            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
+            There are no constructors or generators exposed due the design, that the gump should parse that control.
             </summary>
-            <param name="tDateTime"></param>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpAlphaRegion.Size">
+            <summary>
+            Stores size of control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpAlphaRegion.Page">
+            <summary>
+            Describes, on which page the component is layered.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpAlphaRegion.Location">
+            <summary>
+            Stores coords which expose location of element.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpAlphaRegion.ElementID">
+            <summary>
+            Describes the ElementID wich equals the Queue-Nr. from gump packet in wich order the gump has been generated.
+            </summary>
+        </member>
+        <member name="T:ScriptSDK.Gumps.GumpBackGround">
+            <summary>
+            GumpBackGround component exposes a Panel, the player can read.<br/>
+            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
+            There are no constructors or generators exposed due the design, that the gump should parse that control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpBackGround.Location">
+            <summary>
+            Stores coords which expose location of element.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpBackGround.Size">
+            <summary>
+            Stores size of control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpBackGround.GumpID">
+            <summary>
+            Stores the logical gump graphic wich the parser behind used to build the background on client side.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpBackGround.Page">
+            <summary>
+            Stores page layer of component.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpBackGround.ElementID">
+            <summary>
+            Stores unique elementID.
+            </summary>
+        </member>
+        <member name="T:ScriptSDK.Gumps.GumpGroup">
+            <summary>
+            GumpAlphaRegion component exposes a Panel, the player can read.<br/>
+            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
+            There are no constructors or generators exposed due the design, that the gump should parse that control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpGroup.ID">
+            <summary>
+            Stores group ID.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpGroup.Page">
+            <summary>
+            Describes, on which page the component is layered.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpGroup.ElementID">
+            <summary>
+            Stores the unique elementID of component.
+            </summary>
+        </member>
+        <member name="T:ScriptSDK.Gumps.GumpHtml">
+            <summary>
+            GumpHtml component exposes a Panel, the player can read.<br/>
+            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
+            There are no constructors or generators exposed due the design, that the gump should parse that control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtml.Location">
+            <summary>
+            Stores coords which expose location of element.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtml.Size">
+            <summary>
+            Stores size of control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtml.Background">
+            <summary>
+            Stores if background is visible.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtml.Scrolling">
+            <summary>
+            Stores if scrollbars are visible.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtml.Page">
+            <summary>
+            Describes, on which page the component is layered.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtml.ElementID">
+            <summary>
+            Stores the unique elementID of component.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtml.Text">
+            <summary>
+            Stores the Parsed Text.
+            </summary>
+        </member>
+        <member name="T:ScriptSDK.Gumps.GumpHtmlLocalized">
+            <summary>
+            GumpAlphaRegion component exposes a Panel, the player can read.<br/>
+            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
+            There are no constructors or generators exposed due the design, that the gump should parse that control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.Location">
+            <summary>
+            Stores coords which expose location of element.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.Size">
+            <summary>
+            Stores size of control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.ClilocID">
+            <summary>
+            Stores localizeable cliloc data table ID.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.Background">
+            <summary>
+            Stores if background is visible.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.Scrolling">
+            <summary>
+            Stores if scroll bars are visible.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.Page">
+            <summary>
+            Describes, on which page the component is layered.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.ElementID">
+            <summary>
+            Stores the unique elementID of component.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.Color">
+            <summary>
+            Stores text color.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.Args">
+            <summary>
+            Stores arguments.
+            </summary>
+        </member>
+        <member name="T:ScriptSDK.Gumps.GumpImage">
+            <summary>
+            GumpImage component exposes a PictureBox, the player can read.<br/>
+            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
+            There are no constructors or generators exposed due the design, that the gump should parse that control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpImage.Location">
+            <summary>
+            Stores coords which expose location of element.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpImage.GraphicID">
+            <summary>
+            Stores graphic index ID of gump graphic.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpImage.Color">
+            <summary>
+            Stores the color of component (0 = no color!).
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpImage.Page">
+            <summary>
+            Stores how many pages this gump.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpImage.ElementID">
+            <summary>
+            Stores the unique elementID of component.
+            </summary>
+        </member>
+        <member name="T:ScriptSDK.Gumps.GumpItem">
+            <summary>
+            GumpItem component exposes a PictureBox, the player can read.<br/>
+            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
+            There are no constructors or generators exposed due the design, that the gump should parse that control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpItem.Location">
+            <summary>
+            Stores coords which expose location of element.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpItem.GraphicID">
+            <summary>
+            Stores the graphic ID of object from art.uop\mul datatable.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpItem.Color">
+            <summary>
+            Stores text color.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpItem.Page">
+            <summary>
+            Describes, on which page the component is layered.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpItem.ElementID">
+            <summary>
+            Stores the unique elementID of component.
+            </summary>
+        </member>
+        <member name="T:ScriptSDK.Gumps.GumpItemProperty">
+            <summary>
+            GumpItemProperty component exposes a Tooltip, the player can read.<br/>
+            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
+            There are no constructors or generators exposed due the design, that the gump should parse that control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpItemProperty.ClilocID">
+            <summary>
+            Stores the ClilocID of localized text.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpItemProperty.ElementID">
+            <summary>
+            Stores the unique elementID of component.
+            </summary>
+        </member>
+        <member name="T:ScriptSDK.Gumps.GumpLabel">
+            <summary>
+            GumpLabel component exposes a Panel, the player can read.<br/>
+            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
+            There are no constructors or generators exposed due the design, that the gump should parse that control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpLabel.Location">
+            <summary>
+            Stores coords which expose location of element.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpLabel.Size">
+            <summary>
+            Stores size of control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpLabel.Color">
+            <summary>
+            Stores text color.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpLabel.Page">
+            <summary>
+            Describes, on which page the component is layered.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpLabel.ElementID">
+            <summary>
+            Stores the unique elementID of component.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpLabel.Text">
+            <summary>
+            Stores the Parsed Text.
+            </summary>
+        </member>
+        <member name="T:ScriptSDK.Gumps.GumpTooltip">
+            <summary>
+            GumpTooltip component exposes a Tooltip, the player can read.<br/>
+            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
+            There are no constructors or generators exposed due the design, that the gump should parse that control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpTooltip.ClilocID">
+            <summary>
+            Stored ClilocID of ToolTip.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpTooltip.Page">
+            <summary>
+            Stored Page.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpTooltip.ElementID">
+            <summary>
+            Stored ElementID.
+            </summary>
+        </member>
+        <member name="T:ScriptSDK.Gumps.GumpButton">
+            <summary>
+            GumpButton control exposes a button which the player can click when he wants to perform a certain action.<br/>
+            This control is a pseudo equivalent to a windows form control but only contains UO suitable properties.<br/>
+            There are no constructors or generators exposed due the to design of the SDK.<br/>
+            Use Gump.GetGump(GumpType).Buttons to retrieve a list of GumpButton instances from the specified gump.
+            </summary>
+        </member>
+        <member name="M:ScriptSDK.Gumps.GumpButton.Click">
+            <summary>
+            Click function performs an update onto gump and expose further actions which are controlled by server.<br/>
+            Function validates if the button is still valid (serial of generator is still intact) and then performs a dynamic<br/>
+            click action regardless of layered index.
+            </summary>
             <returns></returns>
         </member>
-        <member name="M:StealthAPI.Converters.ToDouble(System.DateTime)">
+        <member name="P:ScriptSDK.Gumps.GumpButton.Page">
             <summary>
-            Converts a datetime.datetime from Python to a TDateTimein Delphi.
-            For more info see: http://docs.embarcadero.com/products/rad_studio/delphiAndcpp2009/HelpUpdate2/EN/html/delphivclwin32/System_TDateTime.html
+            Stores how many pages this gump.
             </summary>
-            <param name="dateTime"></param>
         </member>
-        <member name="M:StealthAPI.Converters.SplitN``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+        <member name="P:ScriptSDK.Gumps.GumpButton.Location">
             <summary>
-            A generator to divide a sequence into chunks of n units.
+            Stores coords which expose location of element.
             </summary>
-            <param name="seq"></param>
-            <param name="n"></param>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpButton.ArtLocation">
+            <summary>
+            Stores location of art, if control inherits from tiled button control, else returns (-1,-1).
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpButton.ArtID">
+            <summary>
+            Stores ID of art, if control inherits from tiled button control, else returns -1.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpButton.ElementID">
+            <summary>
+            Stores ElementID which expose the unique queue number of element.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpButton.PacketValue">
+            <summary>
+            Stores packet value of control, which is only exposed for debug research. The control will handle actions standalone.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpButton.Color">
+            <summary>
+            Stores color of art, if control inherits from tiled button control, else returns -1.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpButton.QuitID">
+            <summary>
+            Purpose is unknown. TODO : Find out.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpButton.Graphic">
+            <summary>
+            Stores the Graphic ID of pressed and released control.
+            </summary>
+        </member>
+        <member name="T:ScriptSDK.Gumps.GumpCheckBox">
+            <summary>
+            GumpCheckBox control exposes a checkbox, the player can push when he want perform certain actions<br/>
+            This control is a pseudo equivalent to a windows form control but with uo suitable properties only.<br/>
+            There are no constructors or generators exposed due the design, that the gump should parse that control.
+            </summary>
+        </member>
+        <member name="M:ScriptSDK.Gumps.GumpCheckBox.Click(System.Boolean)">
+            <summary>
+            Click function performs an update onto gump and expose further actions which are controlled by server.<br/>
+            Function validates if the checkbox is still valid (serial of generator is still intact) and then performs a dynamic<br/>
+            click action regardless of layered index.
+            </summary>
             <returns></returns>
         </member>
-        <member name="T:StealthAPI.AboutData">
+        <member name="P:ScriptSDK.Gumps.GumpCheckBox.Checked">
             <summary>
-            About data
+            Stores if Checkbox is checked or not.
             </summary>
         </member>
-        <member name="T:StealthAPI.EventTypes">
+        <member name="P:ScriptSDK.Gumps.GumpCheckBox.Page">
             <summary>
-            Event Enumeration
+            Stores how many pages this gump.
             </summary>
         </member>
-        <member name="M:StealthAPI.Marshaler.MarshalToObject``1(System.Byte[])">
+        <member name="P:ScriptSDK.Gumps.GumpCheckBox.Location">
             <summary>
-            Перевести массив байт в объект
+            Stores coords which expose location of element.
             </summary>
-            <param name="buffer">Массив байт</param>
-            <returns>Результирующий объект</returns>
         </member>
-        <member name="F:StealthAPI.Stealth.StealthAttachTimeout">
+        <member name="P:ScriptSDK.Gumps.GumpCheckBox.Graphic">
             <summary>
-            Connect timeout. Default 1 minute
+            Stores the Graphic ID of pressed and released control.
             </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpCheckBox.PacketValue">
+            <summary>
+            Stores packet value of control, which is only exposed for debug research. The control will handle actions standalone.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpCheckBox.ElementID">
+            <summary>
+            Stores ElementID which expose the unique queue number of element.
+            </summary>
+        </member>
+        <member name="T:ScriptSDK.Gumps.GumpRadioButton">
+            <summary>
+            GumpRadioButton control exposes a radiobutton, the player can push when he want perform certain actions<br/>
+            This control is a pseudo equivalent to a windows form control but with uo suitable properties only.<br/>
+            There are no constructors or generators exposed due the design, that the gump should parse that control.
+            </summary>
+        </member>
+        <member name="M:ScriptSDK.Gumps.GumpRadioButton.Click(System.Boolean)">
+            <summary>
+            Click function performs an update onto gump and expose further actions which are controlled by server.<br/>
+            Function validates if the radiobutton is still valid (serial of generator is still intact) and then performs a dynamic<br/>
+            click action regardless of layered index.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpRadioButton.Graphic">
+            <summary>
+            Stores the Graphic ID of pressed and released control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpRadioButton.Checked">
+            <summary>
+            Stores if radiobutton is checked or not.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpRadioButton.Page">
+            <summary>
+            Stores PageID which expose on which layer of gump the element is assigned.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpRadioButton.Location">
+            <summary>
+            Stores coords which expose location of element.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpRadioButton.PacketValue">
+            <summary>
+            Stores packet value of control, which is only exposed for debug research. The control will handle actions standalone.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpRadioButton.ElementID">
+            <summary>
+            Stores ElementID which expose the unique queue number of element.
+            </summary>
+        </member>
+        <member name="T:ScriptSDK.Gumps.GumpTextEdit">
+            <summary>
+            GumpTextEdit control exposes a TextEdit, the player can read or modify.<br/>
+            This control is a pseudo equivalent to a windows form control but with uo suitable properties only.<br/>
+            There are no constructors or generators exposed due the design, that the gump should parse that control.
+            Whenever the owner gump performs an action through radiobutton, button or checkbox (which cause an update of gump)<br/>
+            the gump will update text controls internal before sending those actions.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpTextEdit.ElementID">
+            <summary>
+            Stores ElementID which expose the unique queue number of element.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpTextEdit.Page">
+            <summary>
+            Stores PageID which expose on which layer of gump the element is assigned.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpTextEdit.Location">
+            <summary>
+            Stores coords which expose location of element.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpTextEdit.Size">
+            <summary>
+            Stores size of control.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpTextEdit.Color">
+            <summary>
+            Stores text color of text.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpTextEdit.TextID">
+            <summary>
+            Stores TextID of control, which is only exposed for debug research. The control will handle actions standalone.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpTextEdit.ReturnValue">
+            <summary>
+            Stores ReturnValue of control, which is only exposed for debug research. The control will handle actions standalone.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpTextEdit.Text">
+            <summary>
+            Allows to read and write text content. Will be automated updated via gump.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.GumpTextEdit.Limit">
+            <summary>
+            Stores the character limit of text. Returns -1 if length is infinite.<br/>
+            Be aware, that the gump has to cut down text if size greater limit.
+            </summary>
+        </member>
+        <member name="T:ScriptSDK.Gumps.Gump">
+            <summary>
+            The class Gump is an convenient class for handling the complexity of native UO-client gumps. The user <b>must</b> understand that gumps are <br/>
+            server dictated/controlled user interfaces which allow very less but powerful actions through interface actions.<br/>
+            Components and controls of a gump <b>must never</b> be manually initiliased, they are generated by the object parser of this class.<br/>
+            One more side note : Components are read only, controls have custom actions!
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.GumpType">
+            <summary>
+            Stores unique type generated by server compiler.
+            Same gump classes will send same gump type, like crafting : Smith, tailor and more will send same gump type.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Serial">
+            <summary>
+            Stores unique Serial of instanced gump.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Location">
+            <summary>
+            Stores coords which expose location of element.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Pages">
+            <summary>
+            Stores how many pages this gump 
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Movable">
+            <summary>
+            Stores if the gump is moveable on the graphical client.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Resizeable">
+            <summary>
+            Stores if the gump can be resized.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Disposeable">
+            <summary>
+            Stores if the gump is disposeable.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Closeable">
+            <summary>
+            Stores if the gump can be closed via right click(true) or requires packet value as button reply(false).
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Groups">
+            <summary>
+            Stores all "Groupbox" components.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.BackGrounds">
+            <summary>
+            Stores all "Background" components.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.AlphaRegions">
+            <summary>
+            Stores all "Panel" components.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Buttons">
+            <summary>
+            Stores all "Button" controls.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Checkboxes">
+            <summary>
+            Stores all "Checkbox" controls.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.RadioButtons">
+            <summary>
+            Stores all "RadioButton" controls.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.HTMLTexts">
+            <summary>
+            Stores all "HTML-Memo" components.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.HTMLLocalizedTexts">
+            <summary>
+            Stores all "Localized HTML-Memo" components.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.TextEdits">
+            <summary>
+            Stores all "TextEdit" controls.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Images">
+            <summary>
+            Stores all "Gump Picture" components.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Labels">
+            <summary>
+            Stores all "Label" components.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Items">
+            <summary>
+            Stores all "Item Picture" components.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Tooltips">
+            <summary>
+            Stores all "Tooltip" components.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.ItemProperties">
+            <summary>
+            Stores all "Item Property" components.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Index">
+            <summary>
+            Returns index of active object by serial or -1 when no longer valid.
+            </summary>
+        </member>
+        <member name="M:ScriptSDK.Gumps.Gump.Close">
+            <summary>
+            Function tries to close gump but returns false.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Gumps.Gump.IgnoreSerial">
+            <summary>
+            Adds serial to ignore list for further gump actions.
+            </summary>
+        </member>
+        <member name="M:ScriptSDK.Gumps.Gump.IgnoreType">
+            <summary>
+            Adds gump type to ignore list for further gump actions.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Count">
+            <summary>
+            Returns amount of active gumps regardless of type or serial.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Serials">
+            <summary>
+            Returns list of all active gump serials regardless of type.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.Types">
+            <summary>
+            Returns list of all active gump types regardless of serials.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Gumps.Gump.ActiveGumps">
+            <summary>
+            Returns list of active gumps regardless of types or serials.
+            </summary>
+        </member>
+        <member name="M:ScriptSDK.Gumps.Gump.GetGump(System.UInt32)">
+            <summary>
+            Scans for active gump with given type and returns a proper object image of it. Or returns null if no result found.
+            </summary>
+            <param name="Type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Gumps.Gump.GetGump(ScriptSDK.Serial)">
+            <summary>
+            Scans for active gump with given serial and returns a proper object image of it. Or returns null if no result found.
+            </summary>
+            <param name="serial"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Gumps.Gump.ClearIgnoreList">
+            <summary>
+            Clears ignorelist for gump types and serial.
+            </summary>
+        </member>
+        <member name="M:ScriptSDK.Gumps.Gump.WaitForGump(System.UInt32,System.Double)">
+            <summary>
+            Function describes a process where the user waits for a certain gump type dynamicly but <br/>
+            for a given timespan. Returns true if this event occured or false if not.
+            </summary>
+            <param name="Type"></param>
+            <param name="MaxDelay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Gumps.Gump.WaitForGump(System.UInt32,System.Double,ScriptSDK.Gumps.Gump@)">
+            <summary>
+            Function describes a process where the user waits for a certain gump type dynamicly but <br/>
+            for a given timespan. Returns true if this event occured or false if not.<br/>
+            Additional generates a gump object if possible or return null.
+            </summary>
+            <param name="Type"></param>
+            <param name="MaxDelay"></param>
+            <param name="gump"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Gumps.Gump.WaitForGumpClose(System.UInt32,System.Double)">
+            <summary>
+            Function allows to check if a certain gump closes within maxdelay.
+            </summary>
+            <param name="type"></param>
+            <param name="maxdelay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Gumps.Gump.WaitForGumpClose(ScriptSDK.Serial,System.Double)">
+            <summary>
+            Function allows to check if a certain gump closes within maxdelay.
+            </summary>
+            <param name="serial"></param>
+            <param name="maxdelay"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ScriptSDK.Items.Item">
+            <summary>
+            Item class expose functions and properties to handle and manage actions about any mobile.
+            </summary>	
+            <example>
+            Example #1 Doing a generic search via Item.Find.
+            <code language="CSharp">
+            <![CDATA[
+                List<uint> locations = new List<uint>();
+                locations.Add(0x0); // Ground
+                //We designed a Class Dagger wich inherited from Item and had search params
+                List<Item> search = Item.Find(typeof(Dagger),locations,true;
+            ]]>
+            </code>
+            </example>
+            <example>
+            Example #2 Another way of doing a generic search via Item.Find.   
+            <code language="CSharp">
+            <![CDATA[
+                List<uint> locations = new List<uint>();
+                locations.Add(0x0); // Ground
+                List<Type> types = new List<Type>();
+                types.Add(typeof(Dagger));
+                types.Add(typeof(Sword)); 
+                //We designed a Class Dagger and a Class Sword which inherited from Item and had search params
+                List<Item> search = Item.Find(types,locations,true;
+            ]]>
+            </code>
+            </example>
+            <example>
+            Example #3 Yet another way of generic search via Item.Find.
+            <code language="CSharp">
+            <![CDATA[
+                //We designed a Class Dagger and a class Sword which inherited from Item and had search params
+                List<Item> search = Item.Find(typeof(Dagger),0x0,true;
+            ]]>
+            </code>
+            </example>      
+            <example>
+            Example #4 Last way of generic search via Item.Find
+            <code language="CSharp">
+            <![CDATA[
+                List<Type> types = new List<Type>();
+                types.Add(typeof(Sword));
+                types.Add(typeof(Dagger)); 
+                //We designed a Class Sword and a Class Dagger which inherited from Item and had search params
+                List<Item> search = Item.Find(types,0x0,true;
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.#ctor(System.UInt32)">
+            <summary>
+            Alternative constructor.
+            </summary>
+            <param name="ObjectID"></param>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.#ctor(ScriptSDK.Serial)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="serial"></param>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.LootType">
+            <summary>
+            Returns the loottype of item object.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.RequiredRace">
+            <summary>
+            Returns current race requirements.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.IsQuestItem">
+            <summary>
+            Returns current state, if item is a quest item.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.SecureLevel">
+            <summary>
+            Returns current secure level.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.Weight">
+            <summary>
+            Returns current weigth.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.Amount">
+            <summary>
+            Returns current amount.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.BlessedFor">
+            <summary>
+            Returns current informations about personal blessing.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.Price">
+            <summary>
+            Returns current price, if item is on vendor list (NPC).
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.IsContainer">
+            <summary>
+            Returns if object contains idenfitication as container.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.Insured">
+            <summary>
+            Returns if item is insured
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.IsSecured">
+            <summary>
+            Returns if item is secured.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.IsLockedDown">
+            <summary>
+            Returns if item is lockdown.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.DefaultLabelNumber">
+            <summary>
+            Returns the default labelnumber based on graphic type.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.QuestItemHue">
+            <summary>
+            Stores the default color for quest markup.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.NonTransferable">
+            <summary>
+            Stores if item can be transfered.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.WearableByGargoyles">
+            <summary>
+            Returns if gargoyles could wear the item.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.WearableByElves">
+            <summary>
+            Returns if elvs could wear the item.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.PickedItem">
+            <summary>
+            Sets or gets item to "I must be picked as next" for drag operations.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.CheckLocationBeforeDrop">
+            <summary>
+            Gets or sets if the location must be validated before allowing drop actions.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.DropDelay">
+            <summary>
+            Gets or sets the dropdelay which is equivalent to ObjectOptions.DropDelay.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.AllowEquipedCast">
+            <summary>
+            Returns always false because it´s a dummy for further inheritence.
+            </summary>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.Movable">
+            <summary>
+            Returns if the object theoretical could be moved.
+            </summary>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.CheckBlessed(System.Object)">
+            <summary>
+            Returns if the object is blessed for passed object.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.CheckBlessed(ScriptSDK.Mobiles.Mobile)">
+            <summary>
+            Returns if the object is blessed for passed mobile.
+            </summary>
+            <param name="m"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.ToString">
+            <summary>
+            Pass item and formats it properly to string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.IsUnderYourFeet(ScriptSDK.UOEntity)">
+            <summary>
+            Returns true if object is right under players feet.
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.Find(System.Type,System.Collections.Generic.List{System.UInt32},System.Boolean)">
+            <summary> 
+            Generic Search for Item.
+            </summary>
+            <param name="type"></param>
+            <param name="Locations"></param>
+            <param name="SubSearch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.Find(System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.UInt32},System.Boolean)">
+            <summary>
+            Generic Search for Item.
+            </summary>
+            <param name="types"></param>
+            <param name="Locations"></param>
+            <param name="SubSearch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.Find(System.Type,System.UInt32,System.Boolean)">
+            <summary>
+            Generic Search for Item.
+            </summary>
+            <param name="type"></param>
+            <param name="Location"></param>
+            <param name="SubSearch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.Find(System.Collections.Generic.List{System.Type},System.UInt32,System.Boolean)">
+            <summary>
+            Generic Search for Item.
+            </summary>
+            <param name="types"></param>
+            <param name="Location"></param>
+            <param name="SubSearch"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ScriptSDK.Items.Item.CanBeMoved">
+            <summary>
+            Returns if item theoreticly could be moved.
+            </summary>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.DropHere">
+            <summary>
+            Performs a drop action towards ground.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.Drop">
+            <summary>
+            Performs a drop action towards backpack with random location and stacking (if object allows).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.Drop(ScriptSDK.Data.Point3D)">
+            <summary>
+            Performs a drop action towards backpack with location without stacking.
+            </summary>
+            <param name="location"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.Drop(System.Int32,ScriptSDK.Data.Point3D)">
+            <summary>
+            Performs a drop action towards backpack with location without stacking but with customizeable amount.
+            </summary>
+            <param name="amount"></param>
+            <param name="location"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.DropItem(ScriptSDK.Items.Container)">
+            <summary>
+            Drops item into chosen container with random location and stacking (if object allows).
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.DropItem(ScriptSDK.Items.Container,ScriptSDK.Data.Point3D)">
+            <summary>
+            Drops item into chosen container with chosen location and without stacking.
+            </summary>
+            <param name="target"></param>
+            <param name="location"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.DragItem(System.Int32)">
+            <summary>
+            Drags item with chosen amount.
+            </summary>
+            <param name="amount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.MoveItem(ScriptSDK.Items.Container)">
+            <summary>
+            Performs drag and drop action onto chosen container with random location and stacking(if object allows).
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.MoveItem(ScriptSDK.Items.Container,System.Int32)">
+            <summary>
+            Performs drag and drop action onto chosen container with random location and stacking(if object allows) and chosen amount.
+            </summary>
+            <param name="target"></param>
+            <param name="amount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.MoveItem(ScriptSDK.Items.Container,ScriptSDK.Data.Point3D)">
+            <summary>
+            Performs drag and drop action onto chosen container with location and without stacking.
+            </summary>
+            <param name="target"></param>
+            <param name="location"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.MoveItem(ScriptSDK.Items.Container,System.Int32,ScriptSDK.Data.Point3D)">
+            <summary>
+            Performs drag and drop action onto chosen container with location and without stacking and chosen amount.
+            </summary>
+            <param name="target"></param>
+            <param name="amount"></param>
+            <param name="location"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.Grab">
+            <summary>
+            Performs drag and drop action towards backpack.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Item.Grab(System.Int32)">
+            <summary>
+            Performs drag and drop action with chosen amount towards backpack.
+            </summary>
+            <param name="amount"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ScriptSDK.Items.Container">
+            <summary>
+            Container class expose functions and properties to handle and manage actions about any Container.
+            </summary>
+        </member>
+        <member name="M:ScriptSDK.Items.Container.#ctor(System.UInt32)">
+            <summary>
+            Alternative constructor.
+            </summary>
+            <param name="ObjectID"></param>
+        </member>
+        <member name="M:ScriptSDK.Items.Container.#ctor(ScriptSDK.Serial)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="serial"></param>
+        </member>
+        <member name="M:ScriptSDK.Items.Container.EmptyContainer(ScriptSDK.Items.Container,System.UInt16)">
+            <summary>
+            Function performs a mass moving from this container to another container, regardless of objects.
+            </summary>
+            <param name="Destination"></param>
+            <param name="delay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Container.EmptyContainer(ScriptSDK.Items.Container)">
+            <summary> 
+            Function performs a mass moving from this container to another container, regardless of objects.
+            </summary>
+            <param name="Destination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Container.MoveItems(ScriptSDK.Items.Container)">
+            <summary> 
+            Function performs a mass moving from this container to another container, regardless of objects.
+            </summary>
+            <param name="dest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Container.MoveItems(ScriptSDK.Items.Container,System.Int32)">
+            <summary> 
+            Function performs a mass moving from this container to another container, regardless of objects.
+            </summary>
+            <param name="dest"></param>
+            <param name="delay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Container.MoveItems(ScriptSDK.Items.Container,ScriptSDK.Data.Point3D)">
+            <summary> 
+            Function performs a mass moving from this container to another container, regardless of objects.
+            </summary>
+            <param name="dest"></param>
+            <param name="location"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Container.MoveItems(ScriptSDK.Items.Container,ScriptSDK.Data.Point3D,System.Int32)">
+            <summary> 
+            Function performs a mass moving from this container to another container, regardless of objects.
+            </summary>
+            <param name="dest"></param>
+            <param name="location"></param>
+            <param name="delay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Container.MoveItems(System.UInt16,System.UInt16,ScriptSDK.Items.Container)">
+            <summary>
+            Function performs a mass moving from this container to another container.
+            </summary>
+            <param name="type"></param>
+            <param name="color"></param>
+            <param name="dest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Container.MoveItems(System.UInt16,System.UInt16,ScriptSDK.Items.Container,System.Int32)">
+            <summary>
+            Function performs a mass moving from this container to another container.
+            </summary>
+            <param name="type"></param>
+            <param name="color"></param>
+            <param name="dest"></param>
+            <param name="delay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Container.MoveItems(System.UInt16,System.UInt16,ScriptSDK.Items.Container,ScriptSDK.Data.Point3D)">
+            <summary>
+            Function performs a mass moving from this container to another container.
+            </summary>
+            <param name="type"></param>
+            <param name="color"></param>
+            <param name="dest"></param>
+            <param name="location"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Items.Container.MoveItems(System.UInt16,System.UInt16,ScriptSDK.Items.Container,ScriptSDK.Data.Point3D,System.Int32)">
+            <summary>
+            Function performs a mass moving from this container to another container.
+            </summary>
+            <param name="type"></param>
+            <param name="color"></param>
+            <param name="dest"></param>
+            <param name="location"></param>
+            <param name="delay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptSDK.Samples.UseRunebook.Travel(ScriptSDK.Items.Item,System.Int32,System.String)">
+            <summary> Recall using Runebook.cs Class </summary>
+            <param name="bookspot"></param>
+            <param name="recalltype"></param>
+            <param name="runebookserial"></param>
+            <returns>True if no longer in same location</returns>
         </member>
         <member name="T:ScriptSDK.Attributes.BaseAttributes">
             <summary>
@@ -3024,756 +4183,6 @@
             <param name="p"></param>
             <returns></returns>
         </member>
-        <member name="T:ScriptSDK.Gumps.GumpExtensions">
-            <summary>
-            Extends Gump instanced objects by further functions.
-            </summary>
-        </member>
-        <member name="M:ScriptSDK.Gumps.GumpExtensions.WaitForGumpClose(ScriptSDK.Gumps.Gump,System.Double)">
-            <summary> 
-            Function describes a process where the user waits for a close action for certain gump type dynamicly but <br/>
-            for a given timespan. Returns true if this event occured or false if not.
-            </summary>
-            <param name="gump"></param>
-            <param name="MaxDelay"></param>
-            <returns></returns>
-        </member>
-        <member name="T:ScriptSDK.Gumps.GumpAlphaRegion">
-            <summary>
-            GumpAlphaRegion component exposes a Panel, the player can read.<br/>
-            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
-            There are no constructors or generators exposed due the design, that the gump should parse that control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpAlphaRegion.Size">
-            <summary>
-            Stores size of control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpAlphaRegion.Page">
-            <summary>
-            Describes, on which page the component is layered.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpAlphaRegion.Location">
-            <summary>
-            Stores coords which expose location of element.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpAlphaRegion.ElementID">
-            <summary>
-            Describes the ElementID wich equals the Queue-Nr. from gump packet in wich order the gump has been generated.
-            </summary>
-        </member>
-        <member name="T:ScriptSDK.Gumps.GumpBackGround">
-            <summary>
-            GumpBackGround component exposes a Panel, the player can read.<br/>
-            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
-            There are no constructors or generators exposed due the design, that the gump should parse that control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpBackGround.Location">
-            <summary>
-            Stores coords which expose location of element.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpBackGround.Size">
-            <summary>
-            Stores size of control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpBackGround.GumpID">
-            <summary>
-            Stores the logical gump graphic wich the parser behind used to build the background on client side.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpBackGround.Page">
-            <summary>
-            Stores page layer of component.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpBackGround.ElementID">
-            <summary>
-            Stores unique elementID.
-            </summary>
-        </member>
-        <member name="T:ScriptSDK.Gumps.GumpGroup">
-            <summary>
-            GumpAlphaRegion component exposes a Panel, the player can read.<br/>
-            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
-            There are no constructors or generators exposed due the design, that the gump should parse that control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpGroup.ID">
-            <summary>
-            Stores group ID.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpGroup.Page">
-            <summary>
-            Describes, on which page the component is layered.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpGroup.ElementID">
-            <summary>
-            Stores the unique elementID of component.
-            </summary>
-        </member>
-        <member name="T:ScriptSDK.Gumps.GumpHtml">
-            <summary>
-            GumpHtml component exposes a Panel, the player can read.<br/>
-            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
-            There are no constructors or generators exposed due the design, that the gump should parse that control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtml.Location">
-            <summary>
-            Stores coords which expose location of element.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtml.Size">
-            <summary>
-            Stores size of control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtml.Background">
-            <summary>
-            Stores if background is visible.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtml.Scrolling">
-            <summary>
-            Stores if scrollbars are visible.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtml.Page">
-            <summary>
-            Describes, on which page the component is layered.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtml.ElementID">
-            <summary>
-            Stores the unique elementID of component.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtml.Text">
-            <summary>
-            Stores the Parsed Text.
-            </summary>
-        </member>
-        <member name="T:ScriptSDK.Gumps.GumpHtmlLocalized">
-            <summary>
-            GumpAlphaRegion component exposes a Panel, the player can read.<br/>
-            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
-            There are no constructors or generators exposed due the design, that the gump should parse that control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.Location">
-            <summary>
-            Stores coords which expose location of element.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.Size">
-            <summary>
-            Stores size of control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.ClilocID">
-            <summary>
-            Stores localizeable cliloc data table ID.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.Background">
-            <summary>
-            Stores if background is visible.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.Scrolling">
-            <summary>
-            Stores if scroll bars are visible.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.Page">
-            <summary>
-            Describes, on which page the component is layered.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.ElementID">
-            <summary>
-            Stores the unique elementID of component.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.Color">
-            <summary>
-            Stores text color.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpHtmlLocalized.Args">
-            <summary>
-            Stores arguments.
-            </summary>
-        </member>
-        <member name="T:ScriptSDK.Gumps.GumpImage">
-            <summary>
-            GumpImage component exposes a PictureBox, the player can read.<br/>
-            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
-            There are no constructors or generators exposed due the design, that the gump should parse that control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpImage.Location">
-            <summary>
-            Stores coords which expose location of element.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpImage.GraphicID">
-            <summary>
-            Stores graphic index ID of gump graphic.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpImage.Color">
-            <summary>
-            Stores the color of component (0 = no color!).
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpImage.Page">
-            <summary>
-            Stores how many pages this gump.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpImage.ElementID">
-            <summary>
-            Stores the unique elementID of component.
-            </summary>
-        </member>
-        <member name="T:ScriptSDK.Gumps.GumpItem">
-            <summary>
-            GumpItem component exposes a PictureBox, the player can read.<br/>
-            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
-            There are no constructors or generators exposed due the design, that the gump should parse that control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpItem.Location">
-            <summary>
-            Stores coords which expose location of element.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpItem.GraphicID">
-            <summary>
-            Stores the graphic ID of object from art.uop\mul datatable.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpItem.Color">
-            <summary>
-            Stores text color.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpItem.Page">
-            <summary>
-            Describes, on which page the component is layered.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpItem.ElementID">
-            <summary>
-            Stores the unique elementID of component.
-            </summary>
-        </member>
-        <member name="T:ScriptSDK.Gumps.GumpItemProperty">
-            <summary>
-            GumpItemProperty component exposes a Tooltip, the player can read.<br/>
-            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
-            There are no constructors or generators exposed due the design, that the gump should parse that control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpItemProperty.ClilocID">
-            <summary>
-            Stores the ClilocID of localized text.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpItemProperty.ElementID">
-            <summary>
-            Stores the unique elementID of component.
-            </summary>
-        </member>
-        <member name="T:ScriptSDK.Gumps.GumpLabel">
-            <summary>
-            GumpLabel component exposes a Panel, the player can read.<br/>
-            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
-            There are no constructors or generators exposed due the design, that the gump should parse that control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpLabel.Location">
-            <summary>
-            Stores coords which expose location of element.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpLabel.Size">
-            <summary>
-            Stores size of control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpLabel.Color">
-            <summary>
-            Stores text color.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpLabel.Page">
-            <summary>
-            Describes, on which page the component is layered.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpLabel.ElementID">
-            <summary>
-            Stores the unique elementID of component.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpLabel.Text">
-            <summary>
-            Stores the Parsed Text.
-            </summary>
-        </member>
-        <member name="T:ScriptSDK.Gumps.GumpTooltip">
-            <summary>
-            GumpTooltip component exposes a Tooltip, the player can read.<br/>
-            This component is a pseudo equivalent to a windows form component but with uo suitable properties only.<br/>
-            There are no constructors or generators exposed due the design, that the gump should parse that control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpTooltip.ClilocID">
-            <summary>
-            Stored ClilocID of ToolTip.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpTooltip.Page">
-            <summary>
-            Stored Page.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpTooltip.ElementID">
-            <summary>
-            Stored ElementID.
-            </summary>
-        </member>
-        <member name="T:ScriptSDK.Gumps.GumpButton">
-            <summary>
-            GumpButton control exposes a button which the player can click when he wants to perform a certain action.<br/>
-            This control is a pseudo equivalent to a windows form control but only contains UO suitable properties.<br/>
-            There are no constructors or generators exposed due the to design of the SDK.<br/>
-            Use Gump.GetGump(GumpType).Buttons to retrieve a list of GumpButton instances from the specified gump.
-            </summary>
-        </member>
-        <member name="M:ScriptSDK.Gumps.GumpButton.Click">
-            <summary>
-            Click function performs an update onto gump and expose further actions which are controlled by server.<br/>
-            Function validates if the button is still valid (serial of generator is still intact) and then performs a dynamic<br/>
-            click action regardless of layered index.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpButton.Page">
-            <summary>
-            Stores how many pages this gump.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpButton.Location">
-            <summary>
-            Stores coords which expose location of element.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpButton.ArtLocation">
-            <summary>
-            Stores location of art, if control inherits from tiled button control, else returns (-1,-1).
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpButton.ArtID">
-            <summary>
-            Stores ID of art, if control inherits from tiled button control, else returns -1.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpButton.ElementID">
-            <summary>
-            Stores ElementID which expose the unique queue number of element.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpButton.PacketValue">
-            <summary>
-            Stores packet value of control, which is only exposed for debug research. The control will handle actions standalone.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpButton.Color">
-            <summary>
-            Stores color of art, if control inherits from tiled button control, else returns -1.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpButton.QuitID">
-            <summary>
-            Purpose is unknown. TODO : Find out.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpButton.Graphic">
-            <summary>
-            Stores the Graphic ID of pressed and released control.
-            </summary>
-        </member>
-        <member name="T:ScriptSDK.Gumps.GumpCheckBox">
-            <summary>
-            GumpCheckBox control exposes a checkbox, the player can push when he want perform certain actions<br/>
-            This control is a pseudo equivalent to a windows form control but with uo suitable properties only.<br/>
-            There are no constructors or generators exposed due the design, that the gump should parse that control.
-            </summary>
-        </member>
-        <member name="M:ScriptSDK.Gumps.GumpCheckBox.Click(System.Boolean)">
-            <summary>
-            Click function performs an update onto gump and expose further actions which are controlled by server.<br/>
-            Function validates if the checkbox is still valid (serial of generator is still intact) and then performs a dynamic<br/>
-            click action regardless of layered index.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpCheckBox.Checked">
-            <summary>
-            Stores if Checkbox is checked or not.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpCheckBox.Page">
-            <summary>
-            Stores how many pages this gump.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpCheckBox.Location">
-            <summary>
-            Stores coords which expose location of element.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpCheckBox.Graphic">
-            <summary>
-            Stores the Graphic ID of pressed and released control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpCheckBox.PacketValue">
-            <summary>
-            Stores packet value of control, which is only exposed for debug research. The control will handle actions standalone.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpCheckBox.ElementID">
-            <summary>
-            Stores ElementID which expose the unique queue number of element.
-            </summary>
-        </member>
-        <member name="T:ScriptSDK.Gumps.GumpRadioButton">
-            <summary>
-            GumpRadioButton control exposes a radiobutton, the player can push when he want perform certain actions<br/>
-            This control is a pseudo equivalent to a windows form control but with uo suitable properties only.<br/>
-            There are no constructors or generators exposed due the design, that the gump should parse that control.
-            </summary>
-        </member>
-        <member name="M:ScriptSDK.Gumps.GumpRadioButton.Click(System.Boolean)">
-            <summary>
-            Click function performs an update onto gump and expose further actions which are controlled by server.<br/>
-            Function validates if the radiobutton is still valid (serial of generator is still intact) and then performs a dynamic<br/>
-            click action regardless of layered index.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpRadioButton.Graphic">
-            <summary>
-            Stores the Graphic ID of pressed and released control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpRadioButton.Checked">
-            <summary>
-            Stores if radiobutton is checked or not.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpRadioButton.Page">
-            <summary>
-            Stores PageID which expose on which layer of gump the element is assigned.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpRadioButton.Location">
-            <summary>
-            Stores coords which expose location of element.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpRadioButton.PacketValue">
-            <summary>
-            Stores packet value of control, which is only exposed for debug research. The control will handle actions standalone.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpRadioButton.ElementID">
-            <summary>
-            Stores ElementID which expose the unique queue number of element.
-            </summary>
-        </member>
-        <member name="T:ScriptSDK.Gumps.GumpTextEdit">
-            <summary>
-            GumpTextEdit control exposes a TextEdit, the player can read or modify.<br/>
-            This control is a pseudo equivalent to a windows form control but with uo suitable properties only.<br/>
-            There are no constructors or generators exposed due the design, that the gump should parse that control.
-            Whenever the owner gump performs an action through radiobutton, button or checkbox (which cause an update of gump)<br/>
-            the gump will update text controls internal before sending those actions.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpTextEdit.ElementID">
-            <summary>
-            Stores ElementID which expose the unique queue number of element.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpTextEdit.Page">
-            <summary>
-            Stores PageID which expose on which layer of gump the element is assigned.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpTextEdit.Location">
-            <summary>
-            Stores coords which expose location of element.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpTextEdit.Size">
-            <summary>
-            Stores size of control.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpTextEdit.Color">
-            <summary>
-            Stores text color of text.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpTextEdit.TextID">
-            <summary>
-            Stores TextID of control, which is only exposed for debug research. The control will handle actions standalone.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpTextEdit.ReturnValue">
-            <summary>
-            Stores ReturnValue of control, which is only exposed for debug research. The control will handle actions standalone.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpTextEdit.Text">
-            <summary>
-            Allows to read and write text content. Will be automated updated via gump.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.GumpTextEdit.Limit">
-            <summary>
-            Stores the character limit of text. Returns -1 if length is infinite.<br/>
-            Be aware, that the gump has to cut down text if size greater limit.
-            </summary>
-        </member>
-        <member name="T:ScriptSDK.Gumps.Gump">
-            <summary>
-            The class Gump is an convenient class for handling the complexity of native UO-client gumps. The user <b>must</b> understand that gumps are <br/>
-            server dictated/controlled user interfaces which allow very less but powerful actions through interface actions.<br/>
-            Components and controls of a gump <b>must never</b> be manually initiliased, they are generated by the object parser of this class.<br/>
-            One more side note : Components are read only, controls have custom actions!
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.GumpType">
-            <summary>
-            Stores unique type generated by server compiler.
-            Same gump classes will send same gump type, like crafting : Smith, tailor and more will send same gump type.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Serial">
-            <summary>
-            Stores unique Serial of instanced gump.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Location">
-            <summary>
-            Stores coords which expose location of element.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Pages">
-            <summary>
-            Stores how many pages this gump 
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Movable">
-            <summary>
-            Stores if the gump is moveable on the graphical client.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Resizeable">
-            <summary>
-            Stores if the gump can be resized.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Disposeable">
-            <summary>
-            Stores if the gump is disposeable.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Closeable">
-            <summary>
-            Stores if the gump can be closed via right click(true) or requires packet value as button reply(false).
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Groups">
-            <summary>
-            Stores all "Groupbox" components.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.BackGrounds">
-            <summary>
-            Stores all "Background" components.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.AlphaRegions">
-            <summary>
-            Stores all "Panel" components.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Buttons">
-            <summary>
-            Stores all "Button" controls.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Checkboxes">
-            <summary>
-            Stores all "Checkbox" controls.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.RadioButtons">
-            <summary>
-            Stores all "RadioButton" controls.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.HTMLTexts">
-            <summary>
-            Stores all "HTML-Memo" components.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.HTMLLocalizedTexts">
-            <summary>
-            Stores all "Localized HTML-Memo" components.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.TextEdits">
-            <summary>
-            Stores all "TextEdit" controls.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Images">
-            <summary>
-            Stores all "Gump Picture" components.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Labels">
-            <summary>
-            Stores all "Label" components.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Items">
-            <summary>
-            Stores all "Item Picture" components.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Tooltips">
-            <summary>
-            Stores all "Tooltip" components.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.ItemProperties">
-            <summary>
-            Stores all "Item Property" components.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Index">
-            <summary>
-            Returns index of active object by serial or -1 when no longer valid.
-            </summary>
-        </member>
-        <member name="M:ScriptSDK.Gumps.Gump.Close">
-            <summary>
-            Function tries to close gump but returns false.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Gumps.Gump.IgnoreSerial">
-            <summary>
-            Adds serial to ignore list for further gump actions.
-            </summary>
-        </member>
-        <member name="M:ScriptSDK.Gumps.Gump.IgnoreType">
-            <summary>
-            Adds gump type to ignore list for further gump actions.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Count">
-            <summary>
-            Returns amount of active gumps regardless of type or serial.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Serials">
-            <summary>
-            Returns list of all active gump serials regardless of type.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.Types">
-            <summary>
-            Returns list of all active gump types regardless of serials.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Gumps.Gump.ActiveGumps">
-            <summary>
-            Returns list of active gumps regardless of types or serials.
-            </summary>
-        </member>
-        <member name="M:ScriptSDK.Gumps.Gump.GetGump(System.UInt32)">
-            <summary>
-            Scans for active gump with given type and returns a proper object image of it. Or returns null if no result found.
-            </summary>
-            <param name="Type"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Gumps.Gump.GetGump(ScriptSDK.Serial)">
-            <summary>
-            Scans for active gump with given serial and returns a proper object image of it. Or returns null if no result found.
-            </summary>
-            <param name="serial"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Gumps.Gump.ClearIgnoreList">
-            <summary>
-            Clears ignorelist for gump types and serial.
-            </summary>
-        </member>
-        <member name="M:ScriptSDK.Gumps.Gump.WaitForGump(System.UInt32,System.Double)">
-            <summary>
-            Function describes a process where the user waits for a certain gump type dynamicly but <br/>
-            for a given timespan. Returns true if this event occured or false if not.
-            </summary>
-            <param name="Type"></param>
-            <param name="MaxDelay"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Gumps.Gump.WaitForGump(System.UInt32,System.Double,ScriptSDK.Gumps.Gump@)">
-            <summary>
-            Function describes a process where the user waits for a certain gump type dynamicly but <br/>
-            for a given timespan. Returns true if this event occured or false if not.<br/>
-            Additional generates a gump object if possible or return null.
-            </summary>
-            <param name="Type"></param>
-            <param name="MaxDelay"></param>
-            <param name="gump"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Gumps.Gump.WaitForGumpClose(System.UInt32,System.Double)">
-            <summary>
-            Function allows to check if a certain gump closes within maxdelay.
-            </summary>
-            <param name="type"></param>
-            <param name="maxdelay"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Gumps.Gump.WaitForGumpClose(ScriptSDK.Serial,System.Double)">
-            <summary>
-            Function allows to check if a certain gump closes within maxdelay.
-            </summary>
-            <param name="serial"></param>
-            <param name="maxdelay"></param>
-            <returns></returns>
-        </member>
         <member name="T:ScriptSDK.Engines.ClilocHelper">
             <summary>
             Clilochelper class is support class for localized messages.
@@ -5018,445 +5427,6 @@
             <summary>
             Stores if the application who calls this function has been executed with admin rights.
             </summary>
-        </member>
-        <member name="T:ScriptSDK.Items.Item">
-            <summary>
-            Item class expose functions and properties to handle and manage actions about any mobile.
-            </summary>	
-            <example>
-            Example #1 Doing a generic search via Item.Find.
-            <code language="CSharp">
-            <![CDATA[
-                List<uint> locations = new List<uint>();
-                locations.Add(0x0); // Ground
-                //We designed a Class Dagger wich inherited from Item and had search params
-                List<Item> search = Item.Find(typeof(Dagger),locations,true;
-            ]]>
-            </code>
-            </example>
-            <example>
-            Example #2 Another way of doing a generic search via Item.Find.   
-            <code language="CSharp">
-            <![CDATA[
-                List<uint> locations = new List<uint>();
-                locations.Add(0x0); // Ground
-                List<Type> types = new List<Type>();
-                types.Add(typeof(Dagger));
-                types.Add(typeof(Sword)); 
-                //We designed a Class Dagger and a Class Sword which inherited from Item and had search params
-                List<Item> search = Item.Find(types,locations,true;
-            ]]>
-            </code>
-            </example>
-            <example>
-            Example #3 Yet another way of generic search via Item.Find.
-            <code language="CSharp">
-            <![CDATA[
-                //We designed a Class Dagger and a class Sword which inherited from Item and had search params
-                List<Item> search = Item.Find(typeof(Dagger),0x0,true;
-            ]]>
-            </code>
-            </example>      
-            <example>
-            Example #4 Last way of generic search via Item.Find
-            <code language="CSharp">
-            <![CDATA[
-                List<Type> types = new List<Type>();
-                types.Add(typeof(Sword));
-                types.Add(typeof(Dagger)); 
-                //We designed a Class Sword and a Class Dagger which inherited from Item and had search params
-                List<Item> search = Item.Find(types,0x0,true;
-            ]]>
-            </code>
-            </example>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.#ctor(System.UInt32)">
-            <summary>
-            Alternative constructor.
-            </summary>
-            <param name="ObjectID"></param>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.#ctor(ScriptSDK.Serial)">
-            <summary>
-            Default constructor.
-            </summary>
-            <param name="serial"></param>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.LootType">
-            <summary>
-            Returns the loottype of item object.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.RequiredRace">
-            <summary>
-            Returns current race requirements.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.IsQuestItem">
-            <summary>
-            Returns current state, if item is a quest item.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.SecureLevel">
-            <summary>
-            Returns current secure level.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.Weight">
-            <summary>
-            Returns current weigth.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.Amount">
-            <summary>
-            Returns current amount.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.BlessedFor">
-            <summary>
-            Returns current informations about personal blessing.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.Price">
-            <summary>
-            Returns current price, if item is on vendor list (NPC).
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.IsContainer">
-            <summary>
-            Returns if object contains idenfitication as container.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.Insured">
-            <summary>
-            Returns if item is insured
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.IsSecured">
-            <summary>
-            Returns if item is secured.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.IsLockedDown">
-            <summary>
-            Returns if item is lockdown.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.DefaultLabelNumber">
-            <summary>
-            Returns the default labelnumber based on graphic type.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.QuestItemHue">
-            <summary>
-            Stores the default color for quest markup.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.NonTransferable">
-            <summary>
-            Stores if item can be transfered.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.WearableByGargoyles">
-            <summary>
-            Returns if gargoyles could wear the item.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.WearableByElves">
-            <summary>
-            Returns if elvs could wear the item.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.PickedItem">
-            <summary>
-            Sets or gets item to "I must be picked as next" for drag operations.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.CheckLocationBeforeDrop">
-            <summary>
-            Gets or sets if the location must be validated before allowing drop actions.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.DropDelay">
-            <summary>
-            Gets or sets the dropdelay which is equivalent to ObjectOptions.DropDelay.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.AllowEquipedCast">
-            <summary>
-            Returns always false because it´s a dummy for further inheritence.
-            </summary>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.Movable">
-            <summary>
-            Returns if the object theoretical could be moved.
-            </summary>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.CheckBlessed(System.Object)">
-            <summary>
-            Returns if the object is blessed for passed object.
-            </summary>
-            <param name="obj"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.CheckBlessed(ScriptSDK.Mobiles.Mobile)">
-            <summary>
-            Returns if the object is blessed for passed mobile.
-            </summary>
-            <param name="m"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.ToString">
-            <summary>
-            Pass item and formats it properly to string.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.IsUnderYourFeet(ScriptSDK.UOEntity)">
-            <summary>
-            Returns true if object is right under players feet.
-            </summary>
-            <param name="target"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.Find(System.Type,System.Collections.Generic.List{System.UInt32},System.Boolean)">
-            <summary> 
-            Generic Search for Item.
-            </summary>
-            <param name="type"></param>
-            <param name="Locations"></param>
-            <param name="SubSearch"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.Find(System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.UInt32},System.Boolean)">
-            <summary>
-            Generic Search for Item.
-            </summary>
-            <param name="types"></param>
-            <param name="Locations"></param>
-            <param name="SubSearch"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.Find(System.Type,System.UInt32,System.Boolean)">
-            <summary>
-            Generic Search for Item.
-            </summary>
-            <param name="type"></param>
-            <param name="Location"></param>
-            <param name="SubSearch"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.Find(System.Collections.Generic.List{System.Type},System.UInt32,System.Boolean)">
-            <summary>
-            Generic Search for Item.
-            </summary>
-            <param name="types"></param>
-            <param name="Location"></param>
-            <param name="SubSearch"></param>
-            <returns></returns>
-        </member>
-        <member name="P:ScriptSDK.Items.Item.CanBeMoved">
-            <summary>
-            Returns if item theoreticly could be moved.
-            </summary>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.DropHere">
-            <summary>
-            Performs a drop action towards ground.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.Drop">
-            <summary>
-            Performs a drop action towards backpack with random location and stacking (if object allows).
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.Drop(ScriptSDK.Data.Point3D)">
-            <summary>
-            Performs a drop action towards backpack with location without stacking.
-            </summary>
-            <param name="location"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.Drop(System.Int32,ScriptSDK.Data.Point3D)">
-            <summary>
-            Performs a drop action towards backpack with location without stacking but with customizeable amount.
-            </summary>
-            <param name="amount"></param>
-            <param name="location"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.DropItem(ScriptSDK.Items.Container)">
-            <summary>
-            Drops item into chosen container with random location and stacking (if object allows).
-            </summary>
-            <param name="target"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.DropItem(ScriptSDK.Items.Container,ScriptSDK.Data.Point3D)">
-            <summary>
-            Drops item into chosen container with chosen location and without stacking.
-            </summary>
-            <param name="target"></param>
-            <param name="location"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.DragItem(System.Int32)">
-            <summary>
-            Drags item with chosen amount.
-            </summary>
-            <param name="amount"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.MoveItem(ScriptSDK.Items.Container)">
-            <summary>
-            Performs drag and drop action onto chosen container with random location and stacking(if object allows).
-            </summary>
-            <param name="target"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.MoveItem(ScriptSDK.Items.Container,System.Int32)">
-            <summary>
-            Performs drag and drop action onto chosen container with random location and stacking(if object allows) and chosen amount.
-            </summary>
-            <param name="target"></param>
-            <param name="amount"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.MoveItem(ScriptSDK.Items.Container,ScriptSDK.Data.Point3D)">
-            <summary>
-            Performs drag and drop action onto chosen container with location and without stacking.
-            </summary>
-            <param name="target"></param>
-            <param name="location"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.MoveItem(ScriptSDK.Items.Container,System.Int32,ScriptSDK.Data.Point3D)">
-            <summary>
-            Performs drag and drop action onto chosen container with location and without stacking and chosen amount.
-            </summary>
-            <param name="target"></param>
-            <param name="amount"></param>
-            <param name="location"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.Grab">
-            <summary>
-            Performs drag and drop action towards backpack.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Item.Grab(System.Int32)">
-            <summary>
-            Performs drag and drop action with chosen amount towards backpack.
-            </summary>
-            <param name="amount"></param>
-            <returns></returns>
-        </member>
-        <member name="T:ScriptSDK.Items.Container">
-            <summary>
-            Container class expose functions and properties to handle and manage actions about any Container.
-            </summary>
-        </member>
-        <member name="M:ScriptSDK.Items.Container.#ctor(System.UInt32)">
-            <summary>
-            Alternative constructor.
-            </summary>
-            <param name="ObjectID"></param>
-        </member>
-        <member name="M:ScriptSDK.Items.Container.#ctor(ScriptSDK.Serial)">
-            <summary>
-            Default constructor.
-            </summary>
-            <param name="serial"></param>
-        </member>
-        <member name="M:ScriptSDK.Items.Container.EmptyContainer(ScriptSDK.Items.Container,System.UInt16)">
-            <summary>
-            Function performs a mass moving from this container to another container, regardless of objects.
-            </summary>
-            <param name="Destination"></param>
-            <param name="delay"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Container.EmptyContainer(ScriptSDK.Items.Container)">
-            <summary> 
-            Function performs a mass moving from this container to another container, regardless of objects.
-            </summary>
-            <param name="Destination"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Container.MoveItems(ScriptSDK.Items.Container)">
-            <summary> 
-            Function performs a mass moving from this container to another container, regardless of objects.
-            </summary>
-            <param name="dest"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Container.MoveItems(ScriptSDK.Items.Container,System.Int32)">
-            <summary> 
-            Function performs a mass moving from this container to another container, regardless of objects.
-            </summary>
-            <param name="dest"></param>
-            <param name="delay"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Container.MoveItems(ScriptSDK.Items.Container,ScriptSDK.Data.Point3D)">
-            <summary> 
-            Function performs a mass moving from this container to another container, regardless of objects.
-            </summary>
-            <param name="dest"></param>
-            <param name="location"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Container.MoveItems(ScriptSDK.Items.Container,ScriptSDK.Data.Point3D,System.Int32)">
-            <summary> 
-            Function performs a mass moving from this container to another container, regardless of objects.
-            </summary>
-            <param name="dest"></param>
-            <param name="location"></param>
-            <param name="delay"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Container.MoveItems(System.UInt16,System.UInt16,ScriptSDK.Items.Container)">
-            <summary>
-            Function performs a mass moving from this container to another container.
-            </summary>
-            <param name="type"></param>
-            <param name="color"></param>
-            <param name="dest"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Container.MoveItems(System.UInt16,System.UInt16,ScriptSDK.Items.Container,System.Int32)">
-            <summary>
-            Function performs a mass moving from this container to another container.
-            </summary>
-            <param name="type"></param>
-            <param name="color"></param>
-            <param name="dest"></param>
-            <param name="delay"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Container.MoveItems(System.UInt16,System.UInt16,ScriptSDK.Items.Container,ScriptSDK.Data.Point3D)">
-            <summary>
-            Function performs a mass moving from this container to another container.
-            </summary>
-            <param name="type"></param>
-            <param name="color"></param>
-            <param name="dest"></param>
-            <param name="location"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ScriptSDK.Items.Container.MoveItems(System.UInt16,System.UInt16,ScriptSDK.Items.Container,ScriptSDK.Data.Point3D,System.Int32)">
-            <summary>
-            Function performs a mass moving from this container to another container.
-            </summary>
-            <param name="type"></param>
-            <param name="color"></param>
-            <param name="dest"></param>
-            <param name="location"></param>
-            <param name="delay"></param>
-            <returns></returns>
         </member>
         <member name="T:ScriptSDK.Mobiles.BaseCreature">
             <summary>
@@ -6831,6 +6801,59 @@
             <param name="bound2"></param>
             <param name="allowance"></param>
             <returns></returns>
+        </member>
+        <member name="M:StealthAPI.Converters.ToDateTime(System.Single)">
+            <summary>
+            Converts a TDateTime from Delphi to a DateTime in .NET
+            For more info see: http://docs.embarcadero.com/products/rad_studio/delphiAndcpp2009/HelpUpdate2/EN/html/delphivclwin32/System_TDateTime.html
+            </summary>
+            <param name="tDateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StealthAPI.Converters.ToDateTime(System.Double)">
+            <summary>
+            Converts a TDateTime from Delphi to a DateTime in .NET
+            For more info see: http://docs.embarcadero.com/products/rad_studio/delphiAndcpp2009/HelpUpdate2/EN/html/delphivclwin32/System_TDateTime.html
+            </summary>
+            <param name="tDateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StealthAPI.Converters.ToDouble(System.DateTime)">
+            <summary>
+            Converts a datetime.datetime from Python to a TDateTimein Delphi.
+            For more info see: http://docs.embarcadero.com/products/rad_studio/delphiAndcpp2009/HelpUpdate2/EN/html/delphivclwin32/System_TDateTime.html
+            </summary>
+            <param name="dateTime"></param>
+        </member>
+        <member name="M:StealthAPI.Converters.SplitN``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            A generator to divide a sequence into chunks of n units.
+            </summary>
+            <param name="seq"></param>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="T:StealthAPI.AboutData">
+            <summary>
+            About data
+            </summary>
+        </member>
+        <member name="T:StealthAPI.EventTypes">
+            <summary>
+            Event Enumeration
+            </summary>
+        </member>
+        <member name="M:StealthAPI.Marshaler.MarshalToObject``1(System.Byte[])">
+            <summary>
+            Перевести массив байт в объект
+            </summary>
+            <param name="buffer">Массив байт</param>
+            <returns>Результирующий объект</returns>
+        </member>
+        <member name="F:StealthAPI.Stealth.StealthAttachTimeout">
+            <summary>
+            Connect timeout. Default 1 minute
+            </summary>
         </member>
     </members>
 </doc>

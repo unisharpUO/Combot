@@ -45,3 +45,4 @@ C:\Users\jeff\source\repos\Combot\Server\obj\Debug\Server.csprojAssemblyReferenc
 C:\Users\jeff\source\repos\Combot\Server\obj\Debug\Server.csproj.CopyComplete
 C:\Users\jeff\source\repos\Combot\Server\obj\Debug\Server.exe
 C:\Users\jeff\source\repos\Combot\Server\obj\Debug\Server.pdb
+C:\Users\CFS-Jeff\source\repos\Combot\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
