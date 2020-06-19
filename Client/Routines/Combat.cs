@@ -175,6 +175,19 @@ namespace Combot
                     IsBandaging = false;
                     break;
 
+                case "You begin applying the bandages.":
+                    IsBandaging = true;
+                    Controller.IsBusy = true;
+                    break;
+
+                case "You finish applying the bandages.":
+                    IsBandaging = false;
+                    Controller.IsBusy = false;
+                    Client.JobResponse(Jobs.BandageJob.ID, "complete");
+                    Controller.ConsoleMessage("Bandage job complete",
+                            ConsoleColor.Green);
+                    break;
+
                 default:
                     break;
             }
